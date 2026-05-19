@@ -13,8 +13,10 @@
 typedef struct CacheNode {
     char* url;                // Chave
     long hit_count;            // Valor (o contador que será incrementado)
-    struct CacheNode* next;   // Ponteiro para o próximo nó em caso de colisão
+    struct CacheNode* next;
+    long padding[7];   // Ponteiro para o próximo nó em caso de colisão
 } CacheNode;
+
 
 /*
  * Estrutura principal da Tabela Hash
